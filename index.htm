@@ -71,6 +71,32 @@
       font-size: 0.85rem;
     }
   </style>
+	<style>
+		.aligned-prose {
+		  display: grid;
+		  /* Column 1 (Right) = 1fr | Column 2 (Center) = dots | Column 3 (Left) = 1fr */
+		  grid-template-columns: 1fr max-content 1fr;
+		  gap: 12px 20px;
+		  direction: rtl;
+		  font-family: 'Amiri', 'Traditional Arabic', sans-serif;
+		}
+
+		/* 1st column (Sadr): aligns to the right */
+		.aligned-prose span:nth-child(3n + 1) {
+		  text-align: right;
+		}
+
+		/* 2nd column (Dots): sits dead center */
+		.dots {
+		  color: #888;
+		  text-align: center;
+		}
+
+		/* 3rd column (Ajuz): aligns to the left */
+		.aligned-prose span:nth-child(3n + 3) {
+		  text-align: left;
+		}
+	</style>
 </head>
 <body>
   <main>
@@ -81,25 +107,31 @@
 
     <!-- Add a new thought by copying an <li> block to the top of this list. -->
     <ol>
-      <li>
-        <time datetime="2026-11-12">12 Nov 2026</time>
-        <p>The best ideas tend to arrive when I stop chasing them. A walk does more than another hour at the desk.</p>
+			<li>
+		    <time datetime="2026">2026</time>
+		    <div class="aligned-prose">
+		        <span>فكم من عين ذل لا ترى عزا أينمــــا وجهتها</span> <span class="dots">. . .</span> <span>وعقل يقبــــل الضيم مـــن جيف الجهــــال</span>
+		        <span>فعـــــزا من لدنه شواهــــق الجبــــال عقدت</span> <span class="dots">. . .</span> <span>وجعلت معارجـــــــها من شــــديد المحــــال</span>
+		        <span>فلا ابتغاهــــا جاهـل وإن ادعاهــــا لقومـــــه</span> <span class="dots">. . .</span> <span>ولا وفقــــها سيــــد وإن ادعــــى الأسباب</span>
+		        <span>وهذا بيـت أستودعـــــه عند ربـــــي لعلّـــــي</span> <span class="dots">. . .</span> <span>أدرك منــــاط العــــز من سرٍ ومن شــــوق</span> 
+		    </div>
       </li>
       <li>
-        <time datetime="2026-11-03">3 Nov 2026</time>
-        <p>Writing something down is a way of agreeing to think about it again later.</p>
+        <time datetime="2026">2026</time>
+        <p>
+		For 10 years I have wanted to destroy you. Suddenly, I have outgrown everything about you; for kindness in a man or the lack thereof, is a reminder for those upon whom resolve is bestowed, a beautiful mercy within everyone.
+        </p>
       </li>
       <li>
-        <time datetime="2026-10-21">21 Oct 2026</time>
-        <p>Most of what I worry about never happens. The rest rarely happens the way I imagined.</p>
-      </li>
-      <li>
-        <time datetime="2026-10-09">9 Oct 2026</time>
-        <p>Simple things are hard to make, and easy to take for granted.</p>
-      </li>
-      <li>
-        <time datetime="2026-09-28">28 Sep 2026</time>
-        <p>A slow morning is not a wasted morning.</p>
+        <time datetime="2026-11-11">11 Nov 2026</time>
+				<div class="aligned-prose">
+					<span>من افتتـــــن بنفســــــه فحســــــبه ذرائــــــعه</span> <span class="dots">. . .</span> <span>ومن ود الحـق فيـــهم فحســـبه ذو الفضـــل</span>
+					<span>فاحذر من نعمة قد خبزت لعانا لا تجد فيها</span> <span class="dots">. . .</span> <span>أكنـــاف ربــــــــــك وعظيــــــم رحــــــمته</span>
+					<span>أفزعـــمت أن قوام العقـــد سيـــف قوامهـــا</span> <span class="dots">. . .</span> <span>وقد أوجز في قانــــــون هـــــا أنت تاركـــــــه</span>
+					<span>فكــم من قاضيان في النــار أنت حاكمهمــا</span> <span class="dots">. . .</span> <span>وفي فيء اللــــــــــــــعان أنت آخــــــــــــــــذه</span>
+					<span>أأنت حجيجـــــــــــــــــــــه فيــــــــــــــــــــــهم</span> <span class="dots">. . .</span> <span>وقد زعـــــــــــــــــــــمت مخافتــــــــــــــــــــــه</span>
+					<span>أم أنت حُمِّــــــــلت أوزارهــــــــم يومهـــــــــا</span> <span class="dots">. . .</span> <span>إذ كنت ثالثـــــــــــــــــــــــــــــــــــــــــــــــهم</span>
+				</div>
       </li>
     </ol>
 
