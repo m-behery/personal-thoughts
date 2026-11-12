@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Thoughts</title>
+  <meta name="description" content="A running list of personal thoughts.">
+  <style>
+    :root {
+      --paper: #f7f3ec;
+      --ink: #2a2622;
+      --muted: #8a8178;
+      --rule: #e2dacd;
+      --accent: #b4532a;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #1b1917;
+        --ink: #ece6dc;
+        --muted: #9a9086;
+        --rule: #34302b;
+        --accent: #e08a5c;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 18px/1.65 Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    }
+    main {
+      max-width: 38rem;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem 5rem;
+    }
+    header { margin-bottom: 3rem; }
+    h1 {
+      font-size: 2.4rem;
+      font-weight: normal;
+      letter-spacing: -0.01em;
+      margin: 0 0 0.4rem;
+    }
+    header p {
+      margin: 0;
+      color: var(--muted);
+      font-style: italic;
+    }
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      padding: 1.6rem 0;
+      border-top: 1px solid var(--rule);
+    }
+    li:last-child { border-bottom: 1px solid var(--rule); }
+    time {
+      display: block;
+      font: 0.75rem/1 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+    li p { margin: 0; }
+    footer {
+      margin-top: 3rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Personal Thoughts</h1>
+      <p>Small notes, kept for later.</p>
+    </header>
+
+    <!-- Add a new thought by copying an <li> block to the top of this list. -->
+    <ol>
+      <li>
+        <time datetime="2026-11-12">12 Nov 2026</time>
+        <p>The best ideas tend to arrive when I stop chasing them. A walk does more than another hour at the desk.</p>
+      </li>
+      <li>
+        <time datetime="2026-11-03">3 Nov 2026</time>
+        <p>Writing something down is a way of agreeing to think about it again later.</p>
+      </li>
+      <li>
+        <time datetime="2026-10-21">21 Oct 2026</time>
+        <p>Most of what I worry about never happens. The rest rarely happens the way I imagined.</p>
+      </li>
+      <li>
+        <time datetime="2026-10-09">9 Oct 2026</time>
+        <p>Simple things are hard to make, and easy to take for granted.</p>
+      </li>
+      <li>
+        <time datetime="2026-09-28">28 Sep 2026</time>
+        <p>A slow morning is not a wasted morning.</p>
+      </li>
+    </ol>
+
+    <footer>Updated now and then.</footer>
+  </main>
+</body>
+</html>
