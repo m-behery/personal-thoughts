@@ -6,22 +6,26 @@
   <title>Personal Thoughts</title>
   <meta name="description" content="A running list of personal thoughts.">
   <style>
+    /* Gruvbox Light Soft (Default) */
     :root {
-      --paper: #f7f3ec;
-      --ink: #2a2622;
-      --muted: #8a8178;
-      --rule: #e2dacd;
-      --accent: #b4532a;
+      --paper: #f2e5bc;   /* bg0_s */
+      --ink: #3c3836;     /* fg1 */
+      --muted: #7c6f64;   /* fg4 */
+      --rule: #d5c4a1;    /* bg2 */
+      --accent: #af3a03;  /* faded_orange */
     }
+
+    /* Gruvbox Dark Soft */
     @media (prefers-color-scheme: dark) {
       :root {
-        --paper: #1b1917;
-        --ink: #ece6dc;
-        --muted: #9a9086;
-        --rule: #34302b;
-        --accent: #e08a5c;
+        --paper: #32302f;   /* bg0_s */
+        --ink: #ebdbb2;     /* fg1 */
+        --muted: #a89984;   /* fg4 */
+        --rule: #504945;    /* bg2 */
+        --accent: #fe8019;  /* bright_orange */
       }
     }
+
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -70,33 +74,26 @@
       color: var(--muted);
       font-size: 0.85rem;
     }
+
+    /* Arabic Couplet Alignment (Sadr / Dots / Ajuz) */
+    .aligned-prose {
+      display: grid;
+      grid-template-columns: 1fr max-content 1fr;
+      gap: 12px 20px;
+      direction: rtl;
+      font-family: 'Amiri', 'Traditional Arabic', serif;
+    }
+    .aligned-prose span:nth-child(3n + 1) {
+      text-align: right;
+    }
+    .dots {
+      color: var(--muted); /* Inherits Gruvbox muted gray instead of hardcoded #888 */
+      text-align: center;
+    }
+    .aligned-prose span:nth-child(3n + 3) {
+      text-align: left;
+    }
   </style>
-	<style>
-		.aligned-prose {
-		  display: grid;
-		  /* Column 1 (Right) = 1fr | Column 2 (Center) = dots | Column 3 (Left) = 1fr */
-		  grid-template-columns: 1fr max-content 1fr;
-		  gap: 12px 20px;
-		  direction: rtl;
-		  font-family: 'Amiri', 'Traditional Arabic', sans-serif;
-		}
-
-		/* 1st column (Sadr): aligns to the right */
-		.aligned-prose span:nth-child(3n + 1) {
-		  text-align: right;
-		}
-
-		/* 2nd column (Dots): sits dead center */
-		.dots {
-		  color: #888;
-		  text-align: center;
-		}
-
-		/* 3rd column (Ajuz): aligns to the left */
-		.aligned-prose span:nth-child(3n + 3) {
-		  text-align: left;
-		}
-	</style>
 </head>
 <body>
   <main>
